@@ -4,7 +4,6 @@
 </pre>
 
 <img src="https://raw.githubusercontent.com/bernardladenthin/bernardladenthin/main/github-metrics.svg" alt="GitHub Metrics" align="right" width="400px" />
-<img src="https://github-readme-stats.vercel.app/api?username=bernardladenthin&show_icons=true&count_private=true&hide_title=false&include_all_commits=true" alt="GitHub Stats" align="right" width="400px" />
 
 I'm a **Software Developer** at **IAV GmbH** in Berlin, specializing in **automotive infotainment systems** and robust backend development.
 
