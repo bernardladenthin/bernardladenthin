@@ -1,6 +1,5 @@
 <pre align="center">
-  <strong>👨‍💻 Bernard Ladenthin</strong> |
-  <a href="https://www.linkedin.com/in/bernard-ladenthin-39303b42/">LinkedIn</a>
+  <strong>👨‍💻 Bernard Ladenthin</strong> | <a href="http://bernard.ladenthin.net">Homepage</a> | <a href="https://www.linkedin.com/in/bernard-ladenthin-39303b42/">LinkedIn</a>
 </pre>
 
 <img src="https://raw.githubusercontent.com/bernardladenthin/bernardladenthin/main/github-metrics.svg" alt="GitHub Metrics" align="right" width="400px" />
