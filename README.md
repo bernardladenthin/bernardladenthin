@@ -24,9 +24,13 @@ Focuses on:
 - Vanity address search
 - Efficient LMDB database integration
 
-#### 📦 [streambuffer](https://github.com/bernardladenthin/streambuffer)
-A lightweight, high-performance streaming buffer with modular, pluggable backends.  
-Designed for embedded systems and protocol decoders, streambuffer allows flexible **data slicing**, **lookahead**, and **buffer chain composition**.
+#### 🔄 [streambuffer](https://github.com/bernardladenthin/streambuffer)  
+A test-driven, thread-safe streaming buffer that connects an `OutputStream` to an `InputStream` — enabling real-time, bidirectional data flow.  
+Key features:  
+- Supports concurrent reads and writes  
+- Automatic buffer trimming and memory optimization  
+- Optional safe-write mechanism (clone-on-write for immutable data)  
+- Suitable for embedded systems, protocol parsers, and streaming pipelines
 
 ---
 
