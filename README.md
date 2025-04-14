@@ -4,14 +4,42 @@
 
 <img src="https://raw.githubusercontent.com/bernardladenthin/bernardladenthin/main/github-metrics.svg" alt="GitHub Metrics" align="right" width="400px" />
 
-I'm a **Software Developer** at **IAV GmbH** in Berlin, specializing in **automotive infotainment systems** and robust backend development.
+I'm a **Software Developer** at **IAV GmbH** in Berlin, focused on **automotive infotainment systems**, **test-driven development**, and **performance-oriented software engineering**.
 
-My tech stack focuses on:
+---
 
-- JVM languages: `Java`, `Kotlin`, `Groovy`
-- Also experienced with: `Python`, `C`, `C++`, `Assembler`
+### 🧰 Technical Focus
+- **JVM:** `Java`, `Kotlin`, `Groovy`
+- **High-Level:** `C++`, `.NET`, `PHP`
+- **Scripting:** `Python`
+- **Low-Level:** `Assembler (x86, Java bytecode)`, `C`
+- **OS & System:** `GNU/Linux`, `LAMP`, `WINE`
+- **Databases & Data Integrity:** `MySQL`, `SQL`, `LMDB` (key–value store), data integrity (`ECC`, `FEC`, `RS-Codes`)
+- **Performance:** Optimization, high-performance computing (`OpenCL`, `VHDL`)
+- **Cryptography:** `ECC`, `RSA`, `Diffie–Hellman`, blockchain tech (`Bitcoin`, `Monero`, `Bitmessage`)
+- **Testing:** Low-level & high-level testing, test-driven architecture
+- **Build & DevOps:** `Maven`, `Ant`, `Gradle`, `Jenkins`
+- **Distributed Computing:** Parallel/distributed processing
+- **Privacy & Security:** `TOR`, secure communications, blockchain privacy, attack vector analysis
 
-All of my public projects are **test-driven** and emphasize clarity, performance, and maintainability.
+---
+
+### 🛠️ Professional Areas
+
+- Automotive HMI software development
+- Software integration and interface design
+- Embedded systems development and protocol-level work
+- DevOps for infotainment systems and continuous delivery
+- Guest lecturer at universities on CI/CD in automotive context
+
+---
+
+### ✅ Certifications & Qualifications
+
+- ⚡ Certified for working on high-voltage automotive systems (up to 1000 V AC / 1500 V DC):  
+  Elektrofachkraft (EFffT) gem. DGUV-I 209-093 – Stufe 2E (FHV)
+- 🩹 Certified first aider  
+- 🎓 Guest lecturer on DevOps and continuous delivery in automotive software
 
 ---
 
@@ -34,14 +62,16 @@ Key features:
 
 ---
 
-### 📡 Interests
+### 📡 Personal Interests
 
-Outside of work, I enjoy **electronics engineering**, low-level development, and building custom tools or devices to solve unique problems.
+I love working on **electronics projects**, exploring **reverse engineering**, and experimenting with **low-level optimization techniques**.  
+In my spare time, I craft utilities and microtools that blend software and hardware.
 
 ---
 
-### 🌍 Location  
-Based near **Berlin, Germany 🇩🇪**, I love building efficient, testable, and well-documented software — whether it runs on a car, a GPU, or a tiny microcontroller.
+### 🌍 Location
+
+Based near **Berlin, Germany**, I'm passionate about well-tested, efficient, and secure software — whether it's running on a car, a GPU, or a tiny embedded chip.
 
 ---
 
