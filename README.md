@@ -4,7 +4,18 @@
 
 <img src="https://raw.githubusercontent.com/bernardladenthin/bernardladenthin/main/github-metrics.svg" alt="GitHub Metrics" align="right" width="400px" />
 
-I'm a **Software Developer** at **IAV GmbH** in Berlin, focused on **automotive infotainment systems**, **test-driven development**, and **performance-oriented software engineering**.
+I'm a **Senior L3 Site Reliability Engineer** at **Deutsche Bank** in Berlin, focused on **stabilizing mission-critical financial systems**, **cloud-native microservices**, and **production reliability at scale**.
+
+---
+
+### 🚗 Automotive Background (IAV GmbH)
+
+I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, working on... **automotive infotainment and embedded systems** with a strong focus on:
+
+- Android-based HMI development (AOSP)
+- CI/CD pipelines and test automation
+- Performance optimization and system integration
+- Automotive standards (ASPICE, safety-critical systems)
 
 ---
 
