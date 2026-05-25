@@ -47,7 +47,7 @@ I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, workin
 
 ### ✅ Certifications & Qualifications
 
-- ⚡ Certified for working on high-voltage automotive systems (up to 1000 V AC / 1500 V DC):  
+- ⚡ Certified for working on high-voltage automotive systems (up to 1000 V AC / 1500 V DC):  
   Elektrofachkraft (EFffT) gem. DGUV-I 209-093 – Stufe 2E (FHV)
 - 🩹 Certified first aider  
 - 🎓 Guest lecturer on DevOps and continuous delivery in automotive software
@@ -71,6 +71,25 @@ Key features:
 - Optional safe-write mechanism (clone-on-write for immutable data)  
 - Suitable for embedded systems, protocol parsers, and streaming pipelines
 
+#### 🦙 [java-llama.cpp](https://github.com/bernardladenthin/java-llama.cpp)  
+Java bindings for [llama.cpp](https://github.com/ggerganov/llama.cpp) — enabling local LLM inference (text completion, chat, embeddings, reranking, infilling) directly from the JVM without cloud dependencies.  
+Key features:  
+- Blocking and streaming text/chat completion with full sampling control  
+- OpenAI-compatible chat completion with tool/function calling support  
+- Embeddings, reranking, and fill-in-the-middle (infilling)  
+- Pre-built native binaries for Linux, macOS, Windows; CUDA, Metal, and Vulkan via local build  
+- Android support (CPU and OpenCL/Adreno classifiers)  
+- Published on Maven Central as `net.ladenthin:llama`
+
+#### 🗂️ [llamacpp-ai-index-maven-plugin](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin)  
+A Maven plugin that generates hierarchical, AI-readable documentation of Java source projects using local llama.cpp-compatible models — no cloud dependency required.  
+Key features:  
+- Per-file `.ai.md` summaries with keyword metadata extracted by a local GGUF model  
+- Package-level aggregation into `package.ai.md` for fast semantic navigation  
+- Hash-based incremental updates (skips unchanged files)  
+- Configurable prompts for summaries and keywords  
+- Published on Maven Central as `net.ladenthin:llamacpp-ai-index-maven-plugin`
+
 ---
 
 ### 📡 Personal Interests
@@ -87,4 +106,4 @@ Based near **Berlin, Germany**, I'm passionate about well-tested, efficient, and
 ---
 
 > Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/bernard-ladenthin-39303b42/).  
-> I’m always happy to talk about tech, performance, or embedded systems!
+> I'm always happy to talk about tech, performance, or embedded systems!
