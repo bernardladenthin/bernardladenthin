@@ -10,38 +10,47 @@ I'm a **Senior L3 Site Reliability Engineer** at **Deutsche Bank** in Berlin, fo
 
 ### 🚗 Automotive Background (IAV GmbH)
 
-I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, working on... **automotive infotainment and embedded systems** with a strong focus on:
+I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, building **complex automotive infotainment and HMI (Human-Machine Interface) solutions** — the rich, user-facing software that drivers interact with. My focus areas:
 
 - Android-based HMI development (AOSP)
 - CI/CD pipelines and test automation
 - Performance optimization and system integration
-- Automotive standards (ASPICE, safety-critical systems)
+- Process & quality standards (ASPICE)
 
 ---
 
 ### 🧰 Technical Focus
 - **JVM:** `Java`, `Kotlin`, `Groovy`
-- **High-Level:** `C++`, `.NET`, `PHP`
+- **High-level:** `C++`, `.NET`, `PHP`
 - **Scripting:** `Python`
-- **Low-Level:** `Assembler (x86, Java bytecode)`, `C`
-- **OS & System:** `GNU/Linux`, `LAMP`, `WINE`
-- **Databases & Data Integrity:** `MySQL`, `SQL`, `LMDB` (key–value store), data integrity (`ECC`, `FEC`, `RS-Codes`)
-- **Performance:** Optimization, high-performance computing (`OpenCL`, `VHDL`)
-- **Cryptography:** `ECC`, `RSA`, `Diffie–Hellman`, blockchain tech (`Bitcoin`, `Monero`, `Bitmessage`)
-- **Testing:** Low-level & high-level testing, test-driven architecture
+- **Low-level:** `Assembler (x86, Java bytecode)`, `C`
+- **OS & systems:** `GNU/Linux`, `LAMP`, `WINE`
+- **Databases & data integrity:** `MySQL`, `SQL`, `LMDB` key–value store, error correction (`ECC`, `FEC`, `RS-Codes`)
+- **Performance:** high-performance and parallel computing (`OpenCL`, `VHDL`)
+- **Cryptography:** `ECC`, `RSA`, `Diffie–Hellman`, blockchain (`Bitcoin`, `Monero`, `Bitmessage`)
 - **Build & DevOps:** `Maven`, `Ant`, `Gradle`, `Jenkins`
-- **Distributed Computing:** Parallel/distributed processing
-- **Privacy & Security:** `TOR`, secure communications, blockchain privacy, attack vector analysis
+- **Privacy & security:** `TOR`, secure communication, blockchain privacy, attack-vector analysis
+
+---
+
+### 🧪 Quality & Testing
+
+I care deeply about well-tested software with strong quality assurance. Across my projects I combine test-driven development with:
+
+- Property-based testing (`jqwik`) and architecture tests (`ArchUnit`)
+- Mutation testing (`PIT`) and code coverage (`JaCoCo`)
+- Static analysis and null safety (`SpotBugs`, `Error Prone`, `NullAway`)
+- Concurrency verification (`jcstress`, `Lincheck`, `vmlens`)
 
 ---
 
 ### 🛠️ Professional Areas
 
-- Automotive HMI software development
+- Automotive infotainment & HMI software development
 - Software integration and interface design
-- Embedded systems development and protocol-level work
-- DevOps for infotainment systems and continuous delivery
-- Guest lecturer at universities on CI/CD in automotive context
+- Embedded development and protocol-level work
+- DevOps and continuous delivery for infotainment systems
+- Guest lecturer on CI/CD in automotive software
 
 ---
 
@@ -57,38 +66,16 @@ I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, workin
 ### ⚙️ Featured Projects
 
 #### 🧠 [BitcoinAddressFinder](https://github.com/bernardladenthin/BitcoinAddressFinder)
-A high-performance JVM + OpenCL tool that generates and checks Bitcoin & altcoin addresses — designed for cryptographic edge-case exploration and performance experiments.  
-Focuses on:
-- Parallel EC key generation
-- Vanity address search
-- Efficient LMDB database integration
+A high-performance JVM + OpenCL tool that generates and checks Bitcoin and altcoin addresses at scale. Built for cryptographic experiments and raw key-search throughput — with parallel EC key generation, vanity-address search, and fast LMDB lookups.
 
-#### 🔄 [streambuffer](https://github.com/bernardladenthin/streambuffer)  
-A test-driven, thread-safe streaming buffer that connects an `OutputStream` to an `InputStream` — enabling real-time, bidirectional data flow.  
-Key features:  
-- Supports concurrent reads and writes  
-- Automatic buffer trimming and memory optimization  
-- Optional safe-write mechanism (clone-on-write for immutable data)  
-- Suitable for embedded systems, protocol parsers, and streaming pipelines
+#### 🔄 [streambuffer](https://github.com/bernardladenthin/streambuffer)
+A thread-safe, test-driven buffer that connects an `OutputStream` to an `InputStream` for real-time data flow between threads. Supports concurrent reads and writes, automatic buffer trimming, and optional clone-on-write safety.
 
-#### 🦙 [java-llama.cpp](https://github.com/bernardladenthin/java-llama.cpp)  
-Java bindings for [llama.cpp](https://github.com/ggerganov/llama.cpp) — enabling local LLM inference (text completion, chat, embeddings, reranking, infilling) directly from the JVM without cloud dependencies.  
-Key features:  
-- Blocking and streaming text/chat completion with full sampling control  
-- OpenAI-compatible chat completion with tool/function calling support  
-- Embeddings, reranking, and fill-in-the-middle (infilling)  
-- Pre-built native binaries for Linux, macOS, Windows; CUDA, Metal, and Vulkan via local build  
-- Android support (CPU and OpenCL/Adreno classifiers)  
-- Published on Maven Central as `net.ladenthin:llama`
+#### 🦙 [java-llama.cpp](https://github.com/bernardladenthin/java-llama.cpp)
+Java bindings for [llama.cpp](https://github.com/ggerganov/llama.cpp) that run local LLMs entirely on the JVM — text and chat completion, embeddings, reranking, and infilling, with no cloud dependency. Ships pre-built native binaries for Linux, macOS, Windows, and Android. Published on Maven Central as `net.ladenthin:llama`.
 
-#### 🗂️ [llamacpp-ai-index-maven-plugin](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin)  
-A Maven plugin that generates hierarchical, AI-readable documentation of Java source projects using local llama.cpp-compatible models — no cloud dependency required.  
-Key features:  
-- Per-file `.ai.md` summaries with keyword metadata extracted by a local GGUF model  
-- Package-level aggregation into `package.ai.md` for fast semantic navigation  
-- Hash-based incremental updates (skips unchanged files)  
-- Configurable prompts for summaries and keywords  
-- Published on Maven Central as `net.ladenthin:llamacpp-ai-index-maven-plugin`
+#### 🗂️ [llamacpp-ai-index-maven-plugin](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin)
+A Maven plugin that documents Java projects with a local llama.cpp model — no cloud required. Generates per-file and per-package `.ai.md` summaries with keyword metadata, and updates only the files that changed. Published on Maven Central as `net.ladenthin:llamacpp-ai-index-maven-plugin`.
 
 ---
 
