@@ -69,7 +69,7 @@ I care deeply about well-tested software with strong quality assurance. Across m
 A high-performance JVM + OpenCL tool that generates and checks Bitcoin and altcoin addresses at scale. Built for cryptographic experiments and raw key-search throughput — with parallel EC key generation, vanity-address search, and fast LMDB lookups.
 
 #### 🔄 [streambuffer](https://github.com/bernardladenthin/streambuffer)
-A thread-safe, test-driven buffer that connects an `OutputStream` to an `InputStream` for real-time data flow between threads. Supports concurrent reads and writes, automatic buffer trimming, and optional clone-on-write safety.
+A thread-safe buffer that connects an `OutputStream` to an `InputStream` for real-time data flow between threads. Supports concurrent reads and writes, automatic buffer trimming, and optional clone-on-write safety.
 
 #### 🦙 [java-llama.cpp](https://github.com/bernardladenthin/java-llama.cpp)
 Java bindings for [llama.cpp](https://github.com/ggerganov/llama.cpp) that run local LLMs entirely on the JVM — text and chat completion, embeddings, reranking, and infilling, with no cloud dependency. Ships pre-built native binaries for Linux, macOS, Windows, and Android. Published on Maven Central as `net.ladenthin:llama`.
