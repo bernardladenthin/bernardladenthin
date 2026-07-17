@@ -74,8 +74,8 @@ A thread-safe buffer that connects an `OutputStream` to an `InputStream` for rea
 #### 🦙 [java-llama.cpp](https://github.com/bernardladenthin/java-llama.cpp)
 Java bindings for [llama.cpp](https://github.com/ggerganov/llama.cpp) that run local LLMs entirely on the JVM — text and chat completion, embeddings, reranking, and infilling, with no cloud dependency. Ships pre-built native binaries for Linux, macOS, Windows, and Android. Published on Maven Central as `net.ladenthin:llama`.
 
-#### 🗂️ [llamacpp-ai-index-maven-plugin](https://github.com/bernardladenthin/llamacpp-ai-index-maven-plugin)
-A Maven plugin that documents Java projects with a local llama.cpp model — no cloud required. Generates per-file and per-package `.ai.md` summaries with keyword metadata, and updates only the files that changed. Published on Maven Central as `net.ladenthin:llamacpp-ai-index-maven-plugin`.
+#### 🗂️ [srcmorph](https://github.com/bernardladenthin/srcmorph)
+A prompt-driven source-tree transformer that documents and reshapes Java projects with a local llama.cpp model — no cloud required. Walks a source tree and processes each file through configurable prompts, emitting layered per-file, per-package, and per-project `.ai.md` summaries; updates only the files that changed. Ships as a 3-module Maven reactor — a framework-free core library (`net.ladenthin:srcmorph`), a standalone CLI (`net.ladenthin:srcmorph-cli`), and a Maven plugin (`net.ladenthin:srcmorph-maven-plugin`).
 
 ---
 
