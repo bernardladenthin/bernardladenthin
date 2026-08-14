@@ -81,8 +81,10 @@ A prompt-driven source-tree transformer that documents and reshapes Java project
 
 ### 📡 Personal Interests
 
-I love working on **electronics projects**, exploring **reverse engineering**, and experimenting with **low-level optimization techniques**.  
+I love working on **electronics projects** and experimenting with **low-level optimization techniques**.  
 In my spare time, I craft utilities and microtools that blend software and hardware.
+
+I like figuring out how systems behave when there is neither source nor documentation — binary analysis, emulation, and boot-level debugging. Older and less common architectures and Unix systems fascinate me, and I'm still learning my way around them.
 
 ---
 
