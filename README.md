@@ -33,6 +33,15 @@ I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, buildi
 
 ---
 
+### 🔬 Reverse Engineering & Low-Level Debugging
+
+- **Binary analysis** — disassembly, undocumented file and data formats
+- **Emulation, firmware and boot-level debugging**
+- **Differential debugging** — narrowing a fault down by measuring
+  the difference, then reducing it to a minimal reproducer
+
+---
+
 ### 🧪 Quality & Testing
 
 I care deeply about well-tested software with strong quality assurance. Across my projects I combine test-driven development with:
@@ -84,7 +93,7 @@ A prompt-driven source-tree transformer that documents and reshapes Java project
 I love working on **electronics projects** and experimenting with **low-level optimization techniques**.  
 In my spare time, I craft utilities and microtools that blend software and hardware.
 
-I like figuring out how systems behave when there is neither source nor documentation — binary analysis, emulation, and boot-level debugging. Older and less common architectures and Unix systems fascinate me, and I'm still learning my way around them.
+I like figuring out how systems behave when there is neither source nor documentation — binary analysis, emulation, and boot-level debugging. Older and less common architectures and AIX/Unix systems fascinate me, and I'm still learning my way around them.
 
 ---
 
