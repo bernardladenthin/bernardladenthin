@@ -8,14 +8,21 @@ I'm a **Senior L3 Site Reliability Engineer** at **Deutsche Bank** in Berlin, fo
 
 ---
 
-### 🚗 Automotive Background (IAV GmbH)
+### 🩺 Software Surgery — the work I enjoy most
 
-I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, building **complex automotive infotainment and HMI (Human-Machine Interface) solutions** — the rich, user-facing software that drivers interact with. My focus areas:
+What I like best is the **smallest possible change to the hardest possible problem**: a fault buried deep in a large, unfamiliar, sparsely documented system — narrowed down until the fix is a handful of lines, and provable.
 
-- Android-based HMI development (AOSP)
-- CI/CD pipelines and test automation
-- Performance optimization and system integration
-- Process & quality standards (ASPICE)
+The method rarely changes:
+
+- **Reproduce it**, then make the reproduction cheap enough to run again and again
+- **Measure instead of argue** — a plausible theory that survives an hour of reasoning still dies in one experiment
+- **Halve the problem** until what remains is a minimal, standalone reproducer
+- **Change exactly one thing**, and show the red-to-green transition
+- **Write down what turned out to be wrong**, not just what turned out to be right
+
+A recent example: AIX 5.3 — an operating system from 2004 — would not install under QEMU's `pseries` emulation. Two causes, found by measurement rather than by reading code. One was a stale 32-bit half of a register that the emulator folded into a segment identifier, corrupting the address space of every shared library; **three lines**. The other was a device-tree property that was simply never published, so the installer chose the wrong kernel and the finished system crashed on its first boot; **one line, and the property is empty — zero bytes would have done**.
+
+Both ship with an assembly reproducer that runs bare-metal in six seconds and needs no operating system at all, so the defect can be shown to someone who has never heard of AIX.
 
 ---
 
@@ -60,6 +67,17 @@ I care deeply about well-tested software with strong quality assurance. Across m
 - Embedded development and protocol-level work
 - DevOps and continuous delivery for infotainment systems
 - Guest lecturer on CI/CD in automotive software
+
+---
+
+### 🚗 Automotive Background (IAV GmbH)
+
+I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, building **complex automotive infotainment and HMI (Human-Machine Interface) solutions** — the rich, user-facing software that drivers interact with. My focus areas:
+
+- Android-based HMI development (AOSP)
+- CI/CD pipelines and test automation
+- Performance optimization and system integration
+- Process & quality standards (ASPICE)
 
 ---
 
