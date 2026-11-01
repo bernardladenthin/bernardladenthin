@@ -7,7 +7,7 @@
 **👋 Hey — nice that you want to know more about me.**  
 **🌍 Based near Berlin, Germany.**
 
-I'm a **Senior Site Reliability Engineer** at **Deutsche Bank**, focused on stabilizing mission-critical financial systems, cloud-native microservices, and production reliability at scale. Different domain, same discipline as everything below.
+I'm a **Senior Site Reliability Engineer** at **Deutsche Bank**, focused on stabilizing mission-critical financial systems, cloud-native microservices, production reliability at scale — and on the analysis of defects that matter for security. Different domain, same discipline as everything below.
 
 ---
 
@@ -23,9 +23,17 @@ The loop rarely changes, and every pass is meant to make the next one cheaper:
 - **Change exactly one thing**, and show the red-to-green transition
 - **Write down what turned out to be wrong**, not just what turned out to be right
 
-The terrain is usually the same, and it is why the method has to be this literal-minded: **binary analysis** — disassembly, undocumented file and data formats — **emulation**, and **firmware- and boot-level debugging**. Systems with neither source nor documentation to read, where the only honest answer comes from measuring the difference between a run that works and a run that does not.
+The terrain is usually the same, and it is why the method has to be this literal-minded: **binary analysis** — disassembly, undocumented file and data formats — **emulation**, and **firmware- and boot-level debugging**. Systems with neither source nor documentation to read, where the only honest answer comes from measuring the difference between a run that works and a run that does not. And where a test cannot be exhaustive, **formal verification** takes over from measurement.
 
-**📡 Off the clock** — the same interests turn into electronics projects, low-level optimization, and small utilities and microtools that sit between software and hardware. Older and less common architectures and AIX/Unix systems fascinate me, and I'm still learning my way around them.
+**📡 Off the clock** — the same interests turn into electronics projects, low-level optimization, and small utilities and microtools that sit between software and hardware, plus older architectures (PowerPC, big-endian Unix) and the firmware underneath them.
+
+---
+
+### 🛡️ Security
+
+**Linux kernel, `net/sched` — CVE-2026-98584.** The traffic-classifier ematch `em_text` copied a partially uninitialised on-stack `struct tcf_em_text` to userspace on every dump. The residue is kernel stack — pointers included — handed to any process allowed to read the qdisc configuration, so KASLR could be read out systematically, dump by dump. Found by systematic analysis of the netlink dump paths, narrowed to the one struct, then shown with a standalone reproducer; a KMSAN run only confirmed what the analysis had predicted. The fix is a single line: two braces, `= {}`. Upstream in **Linux 7.3**.
+
+[commit `9c572a83037a`](https://git.kernel.org/linus/9c572a83037a) · [CVE record](https://www.cve.org/CVERecord?id=CVE-2026-98584)
 
 ---
 
@@ -60,6 +68,7 @@ Cutting across every layer:
 | **Mutation testing & coverage** | `PIT` (gated at 100%), `JaCoCo` |
 | **Static analysis & null safety** | `SpotBugs`, `Error Prone`, `NullAway`, `Checker Framework`, `JSpecify` |
 | **Concurrency verification** | `jcstress`, `Lincheck`, `vmlens` |
+| **Kernel & C** | `KUnit`, `checkpatch`, `KMSAN` and the other sanitizers, `CBMC` counterexamples |
 
 ---
 
@@ -76,29 +85,25 @@ Cutting across every layer:
 
 ### 🔧 Upstream Work
 
-Most of my systems work ends up as patches to other people's projects. The most complex of those is **[QEMU](https://www.qemu.org/)** — defects in the PowerPC / `pseries` emulation, found while getting AIX 5.3, an operating system from 2004, to install and boot under it. Each one ships with a standalone assembly reproducer that runs bare-metal in seconds and needs no guest OS at all, so a defect can be shown to someone who has never heard of AIX. Several are not AIX-specific: a 16-bit descriptor offset in `spapr_vscsi` that silently corrupts guest data on transfers above 128 KiB, a standard INQUIRY vendor area returned all-zero to every SCSI guest, and `slbmte` / `slbie` disagreeing about what 32-bit mode means. The individual fixes run to a few lines each; the work was in the measuring.
+Most of my systems work ends up as patches to other people's projects. The most complex set is for **[QEMU](https://www.qemu.org/)**: defects in the PowerPC / `pseries` emulation, each shipped with a standalone assembly reproducer that runs bare-metal in seconds and needs no guest OS. Several affect every guest — a 16-bit descriptor offset in `spapr_vscsi` that silently corrupts data on transfers above 128 KiB, an INQUIRY vendor area returned all-zero to every SCSI guest, `slbmte` / `slbie` disagreeing about 32-bit mode. The fixes run to a few lines each; the work was in the measuring.
 
-Open source has interested me since I was a teenager — it started with [openSUSE](https://www.opensuse.org/). Some of the other projects I have contributed to over the years:
+Open source has interested me since I was a teenager — it started with [openSUSE](https://www.opensuse.org/). Merged contributions, newest first:
 
-- [VeraCrypt](https://www.veracrypt.fr/)
-- [subprocess.h](https://github.com/sheredom/subprocess.h)
-- [utest.h](https://github.com/sheredom/utest.h)
-- [llama.cpp](https://github.com/ggml-org/llama.cpp)
-- [Wine](https://www.winehq.org/)
-- [hashcat](https://hashcat.net/hashcat/)
-- [Linux kernel](https://www.kernel.org/)
-
----
-
-### ✅ Certifications & Qualifications
-
-- ⚡ Certified for working on high-voltage automotive systems (up to 1000 V AC / 1500 V DC):  
-  Elektrofachkraft (EFffT) gem. DGUV-I 209-093 – Stufe 2E (FHV)
-- 🩹 Certified first aider  
-- 🎓 Guest lecturer on DevOps and continuous delivery in automotive software
+- **[Linux kernel](https://www.kernel.org/)** — [`9c572a83037a`](https://git.kernel.org/linus/9c572a83037a) `net/sched`: stack infoleak in `em_text_dump()` (CVE-2026-98584, Linux 7.3)
+- **[sccache](https://github.com/mozilla/sccache)** — [#2932](https://github.com/mozilla/sccache/pull/2932) nvcc / distributed-compile exit codes misreported as signals (released in 0.19.0)
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — [#30505](https://github.com/ggml-org/llama.cpp/pull/30505), [#28775](https://github.com/ggml-org/llama.cpp/pull/28775), [#23116](https://github.com/ggml-org/llama.cpp/pull/23116)
+- **[VeraCrypt](https://www.veracrypt.fr/)** — [#1843](https://github.com/veracrypt/VeraCrypt/pull/1843), [#1842](https://github.com/veracrypt/VeraCrypt/pull/1842), [#1844](https://github.com/veracrypt/VeraCrypt/pull/1844), [#1525](https://github.com/veracrypt/VeraCrypt/pull/1525), [#1526](https://github.com/veracrypt/VeraCrypt/pull/1526) — tests for the crypto and platform layers, build and portability fixes
+- **[OpenJML](https://github.com/OpenJML/OpenJML)** — [#982](https://github.com/OpenJML/OpenJML/pull/982), [Specs #29](https://github.com/OpenJML/Specs/pull/29); runtime-assertion-checking defects [#1012](https://github.com/OpenJML/OpenJML/issues/1012) and [#1050](https://github.com/OpenJML/OpenJML/issues/1050) reported with reproducers, fixed by the maintainer
+- **[lmdbjava](https://github.com/lmdbjava/lmdbjava)** — [#288](https://github.com/lmdbjava/lmdbjava/pull/288)
+- **[hashcat](https://hashcat.net/hashcat/)** — [#4763](https://github.com/hashcat/hashcat/pull/4763), [#2706](https://github.com/hashcat/hashcat/pull/2706)
+- **[subprocess.h](https://github.com/sheredom/subprocess.h)** — 7 pull requests ([#104](https://github.com/sheredom/subprocess.h/pull/104) … [#118](https://github.com/sheredom/subprocess.h/pull/118)), **[utest.h](https://github.com/sheredom/utest.h)** — 5 ([#188](https://github.com/sheredom/utest.h/pull/188) … [#192](https://github.com/sheredom/utest.h/pull/192))
+- **[Wine](https://www.winehq.org/)** — three patches, 2006/2007
+- Older: [linux-dash #293](https://github.com/tariqbuilds/linux-dash/pull/293), [geotools #223](https://github.com/geotools/geotools/pull/223)
 
 ---
 
 ### 🚗 Automotive Background (IAV GmbH) — past work
 
-Before moving to SRE work, I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, building automotive infotainment and HMI software — the user-facing systems drivers interact with. That covered Android-based HMI development (AOSP), embedded and protocol-level work, interface design and system integration, CI/CD pipelines and test automation, performance optimization, and ASPICE process and quality standards.
+Before moving to SRE work, I spent over a decade at **IAV GmbH** as a **Senior Software Developer**, building automotive infotainment and HMI software: Android-based HMI (AOSP), embedded and protocol-level work, system integration, CI/CD and test automation under ASPICE.
+
+**Additional qualifications:** guest lecturer on DevOps and continuous delivery in automotive software; certified for work on high-voltage automotive systems (Elektrofachkraft für festgelegte Tätigkeiten, DGUV-I 209-093); certified first aider.
