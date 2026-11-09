@@ -1,8 +1,14 @@
 # Keeps the commit pin of the actions in .github/workflows current: with every action pinned to a
-# full commit SHA (the repository setting that requires it), nothing else moves them.
+# full commit SHA (the repository setting that requires it), nothing else moves them. Minor and
+# patch updates come as one pull request a week; a major update stays a pull request of its own.
 version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+      day: saturday
+    groups:
+      github-actions:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
